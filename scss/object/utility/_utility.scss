@@ -194,15 +194,3 @@ $lh: 100;
 @include mq(sp) {
   .sp_none { display: none !important; }
 }
-
-/* test */
-@include mq() {
-  .test{
-    color: red;
-  }
-
-  .testtest {
-    color: blue;
-    font-size: vw(16);
-  }
-}

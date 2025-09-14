@@ -1,0 +1,28 @@
+/* layout */
+.l-wrapper {
+    position: relative;
+}
+.l-main--bg {
+    background-color: #ddd;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1;
+}
+.l-main--bg__contwrap {
+    width: calc(100% - calc(750px + 5%));
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.l-main {
+    background-color: #fff;
+    width: min(100%, 750px);
+    position: relative;
+    z-index: 2;
+    margin-left: auto;
+    margin-right: 5%;
+}
