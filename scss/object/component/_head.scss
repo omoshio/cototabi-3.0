@@ -1,0 +1,22 @@
+.c-head--2 {
+    text-align: center;
+    text-transform: uppercase;
+    position: relative;
+  }
+  
+  .c-head--2:after {
+    content: '';
+    width: clamp(30px, 6vw, 60px);
+    height: 2px;
+    background-color: #000;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    right: 0;
+    margin: auto;
+  } 
+
+
+  .c-head--3 {
+    text-align: center;
+  }

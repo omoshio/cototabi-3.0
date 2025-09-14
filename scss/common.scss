@@ -1,10 +1,11 @@
-@use 'foundation/reset';
-@use 'foundation/variables';
-@use 'foundation/mixin';
+@use 'foundation/reset' as *;
+@use 'foundation/variables' as *;
+@use 'foundation/mixin' as *;
 
-@use 'layout/header';
-@use 'layout/footer';
-@use 'layout/main';
+@use 'layout/header' as *;
+@use 'layout/footer' as *;
+@use 'layout/main' as *;
 
-@use 'object/component/button';
-@use 'object/utility/utility';
+@use 'object/component/button' as *;
+@use 'object/component/head' as *;
+@use 'object/utility/utility' as *;

@@ -26,3 +26,11 @@
     margin-left: auto;
     margin-right: 5%;
 }
+@media screen and (max-width: 1000px) {
+    .l-main {
+      margin-right: auto;
+    }
+    .l-main--bg__logo {
+      display: none;
+    }
+  }
