@@ -1,0 +1,44 @@
+/* about */
+.p-about__cont-wrap {
+    display: flex;
+    justify-content: space-between;
+    width: 80%;
+    margin: 50px auto 0;
+    gap: clamp(10px, 2vw, 20px);
+  }
+  
+  .p-about__cont-img {
+    width: 25%;
+  }
+  
+  .p-about__cont-txtarea {
+    width: 75%;
+  }
+  
+  /* work */
+  .p-work__cont-list {
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: clamp(15px, 3vw, 30px)
+  }
+  
+  /* SERVICE */
+  .p-service__cont-list {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    gap: clamp(10px, 2vw, 20px)
+  }
+  
+  /* BLOG */
+  .p-blog__cont-list {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: clamp(10px, 2vw, 20px)
+  }
+  
+  /* Contact */
+  .p-contact__wrap {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+  }
