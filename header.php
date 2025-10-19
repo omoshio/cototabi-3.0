@@ -6,7 +6,7 @@
 
   <title><?php wp_title(); ?></title>
   <!-- テーマのCSS -->
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/assets/css/common.css?v=<?php echo filemtime(get_template_directory() . '/assets/css/common.css'); ?>">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/css/common.css?v=<?php echo filemtime(get_template_directory() . '/css/common.css'); ?>">
   <!-- WordPressやプラグインで追加ßされるCSS/JSを挿入 -->
   <?php wp_head(); ?>
 </head>

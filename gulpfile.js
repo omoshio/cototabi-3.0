@@ -8,7 +8,7 @@ function styles() {
     .pipe(sass().on('error', sass.logError))
     .pipe(autoprefixer())
     .pipe(cleanCSS())
-    .pipe(dest('assets/css'));
+    .pipe(dest('css'));
 }
 
 function watchFiles() {

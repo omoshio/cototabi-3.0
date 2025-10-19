@@ -62,3 +62,33 @@ function enqueue_vite_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_vite_assets');
+
+/************************* 
+ * テーマURLショートコード
+*************************/
+
+// 親テーマURLを返すショートコード [tempurl]
+function shortcode_parent_theme_url() {
+return esc_url( get_template_directory_uri() );
+}
+add_shortcode('tempurl', 'shortcode_parent_theme_url');
+
+// 子テーマ（もしくは現在のテーマ）URLを返すショートコード [childurl]
+function shortcode_child_theme_url() {
+return esc_url( get_stylesheet_directory_uri() );
+}
+add_shortcode('childurl', 'shortcode_child_theme_url');
+
+// phpファイル用_ショートコード [tempurl] のショートハンド関数
+function tempurl() {
+echo do_shortcode('[tempurl]');
+}
+
+// phpファイル用_ショートコード [childurl] のショートハンド関数
+function childurl() {
+echo do_shortcode('[childurl]');
+}
+
+/************************* 
+ * 次
+*************************/

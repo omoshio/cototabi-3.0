@@ -117,49 +117,51 @@ $colors: (
 --
 ----------------------------------------------------------------------------------------*/
 
-/* .mb○○-flex */
-$mb: 0;
-@while $mb < 151 {
-  .u-mb#{$mb} { margin-bottom: vw($mb) !important; }
-  $mb: $mb + 5;
-}
-/* .mt○○-flex */
+/* .u-mt */
 $mt: 0;
 @while $mt < 151 {
   .u-mt#{$mt} { margin-top: vw($mt) !important; }
   $mt: $mt + 5;
 }
-/* .ml○○-flex */
+
+/* .u-mb */
+$mb: 0;
+@while $mb < 151 {
+  .u-mb#{$mb} { margin-bottom: vw($mb) !important; }
+  $mb: $mb + 5;
+}
+
+/* .u-ml */
 $ml: 0;
 @while $ml < 51 {
   .u-ml#{$ml} { margin-left: vw($ml) !important; }
   $ml: $ml + 5;
 }
-/* .mr○○-flex */
+/* .u-mr */
 $mr: 0;
 @while $mr < 51 {
   .u-mr#{$mr} { margin-right: vw($mr) !important; }
   $mr: $mr + 5;
 }
-/* .pt○○-flex */
+/* .u-pt */
 $pt: 0;
 @while $pt < 151 {
   .u-pt#{$pt} { padding-top: vw($pt) !important; }
   $pt: $pt + 5;
 }
-/* .pb○○-flex */
+/* .u-pb */
 $pb: 0;
 @while $pb < 151 {
   .u-pb#{$pb} { padding-bottom: vw($pb) !important; }
   $pb: $pb + 5;
 }
-/* .pl○○-flex */
+/* .u-pl */
 $pl: 0;
 @while $pl < 51 {
   .u-pl#{$pl} { padding-left: vw($pl) !important; }
   $pl: $pl + 5;
 }
-/* .pr○○-flex */
+/* .u-pr */
 $pr: 0;
 @while $pr < 51 {
   .u-pr#{$pr} { padding-right: vw($pr) !important; }
