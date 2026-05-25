@@ -22,7 +22,7 @@ function vite_asset($entry) {
 function enqueue_vite_assets() {
     $entry = 'main.js'; // Vite の入力エントリに合わせる
 
-    if (defined('WP_ENV') && WP_ENV === 'development') {
+    if (true) {
         // 開発環境 → Vite Dev サーバーから直接読み込み（HMR対応）
         wp_enqueue_script(
             'vite-dev',
@@ -62,6 +62,13 @@ function enqueue_vite_assets() {
     }
 }
 add_action('wp_enqueue_scripts', 'enqueue_vite_assets');
+
+add_filter('script_loader_tag', function($tag, $handle, $src) {
+    if ($handle === 'vite-dev') {
+        return '<script type="module" src="' . esc_url($src) . '"></script>';
+    }
+    return $tag;
+}, 10, 3);
 
 /************************* 
  * テーマURLショートコード

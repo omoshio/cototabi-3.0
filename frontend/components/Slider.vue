@@ -12,9 +12,9 @@
 import { Vue3Marquee } from 'vue3-marquee'
 
   const images = [
-    '/wp-content/themes/WordPress -Vue -Vite_template/dist/images/img01.png',
-    '/wp-content/themes/WordPress -Vue -Vite_template/dist//images/img02.png',
-    '/wp-content/themes/WordPress -Vue -Vite_template/dist/images/img03.png'
+    '/local.study.com/wp-content/themes/cototabi-3.0/frontend/public/images/img01.png',
+    '/local.study.com/wp-content/themes/cototabi-3.0/frontend/public/images/img02.png',
+    '/local.study.com/wp-content/themes/cototabi-3.0/frontend/public/images/img03.png'
   ]
   </script>
   

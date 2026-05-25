@@ -32,7 +32,7 @@
         </div>
         <div class="p-about__bottom-cont">
           <div class="p-about__img" style="width: 250px; height:250px;background: green">
-            <img src="<?php tempurl(); ?>/images/plofile_image.jpg" width="250" height="250" loading="lazy" alt="藻塩 修">
+            <img src="<?php tempurl(); ?>/images/plofile_image_.jpg" width="250" height="250" loading="lazy" alt="藻塩 修">
           </div>
           <div class="p-about__cont-plofile">
               <p class="p-about__name">藻塩 修</p>
