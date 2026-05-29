@@ -96,6 +96,71 @@ function childurl() {
 echo do_shortcode('[childurl]');
 }
 
-/************************* 
- * 次
-*************************/
+/*********************************  
+ * Instagramフィード用 REST API作成 
+***********************************/
+add_action('rest_api_init', function () {
+
+	register_rest_route('custom/v1', '/instagram', [
+		'methods'  => 'GET',
+		'callback' => 'get_instagram_posts','permission_callback' => '__return_true',
+	]);
+
+});
+
+function get_instagram_posts() {
+
+	$cache = get_transient('instagram_posts');
+
+	if (false !== $cache) {
+		return $cache;
+	}
+
+    /*
+    * NOTE:
+    * 開発中のため一時的にtoken直書き
+    * 本番前にwp-config.phpへ移動すること
+    */
+
+	$token = 'dummy';
+
+	$url = 'https://graph.facebook.com/v23.0/17841417832453627/media?fields=id,media_type,media_url,permalink,timestamp&access_token=' . $token;
+
+	$response = wp_remote_get($url);
+
+	if (is_wp_error($response)) {
+		return new WP_Error(
+			'instagram_error',
+			'Instagram API error',
+			['status' => 500]
+		);
+	}
+
+	$body = json_decode(
+		wp_remote_retrieve_body($response),
+		true
+	);
+
+	set_transient(
+		'instagram_posts',
+		$body,
+		HOUR_IN_SECONDS
+	);
+
+	return $body;
+}
+/*
+★TODO
+
+tokenをwp-config.php へ移動
+
+・wp-config.phpに追記　
+define(
+	'INSTAGRAM_ACCESS_TOKEN',
+	'xxxxx'
+);
+
+・functions.php を下記に変更
+
+$token = INSTAGRAM_ACCESS_TOKEN;
+*/

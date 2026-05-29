@@ -1,0 +1,13 @@
+.p-footer {
+    color: #fff;
+    background-color: #091939;
+    padding-block: clamp(15px, 3vw, 30px);
+    small {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        img {
+            margin-inline: 0.15em;
+        }
+    }
+}
