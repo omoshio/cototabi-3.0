@@ -122,7 +122,7 @@ function get_instagram_posts() {
     * 本番前にwp-config.phpへ移動すること
     */
 
-	$token = 'dummy';
+    $token = FACEBOOK_ACCESS_TOKEN;
 
 	$url = 'https://graph.facebook.com/v23.0/17841417832453627/media?fields=id,media_type,media_url,permalink,timestamp&access_token=' . $token;
 
