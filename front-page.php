@@ -87,7 +87,7 @@
                                 <img src="<?php tempurl(); ?>/images/plofile_image_.jpg" width="300" height="300" loading="lazy" alt="藻塩 修">
                             </div>
                             <div class="p-about__cont-profile">
-                                <div class="p-about__namewrap u-flex">
+                                <div class="p-about__namewrap">
                                     <p class="p-about__name">藻塩 修</p>
                                     <p class="p-about__name--en">Moshio Osamu</p>
                                 </div>

@@ -14,20 +14,20 @@ fadeTargets.forEach((el) => {
 });
 
 
-// service text のボーダーアニメーション
-const serviceTargets = document.querySelectorAll('.c-variable-border');
+// ボーダーアニメーション
+const borderTargets = document.querySelectorAll('.c-variable-border');
 
-const serviceObserver = new IntersectionObserver((entries) => {
+const borderObserver = new IntersectionObserver((entries) => {
   entries.forEach((entry) => {
     if (entry.isIntersecting) {
       entry.target.classList.add('is-active');
-      serviceObserver.unobserve(entry.target);
+      borderObserver.unobserve(entry.target);
     }
   });
 }, {
   threshold: 0.5
 });
 
-serviceTargets.forEach((el) => {
-  serviceObserver.observe(el);
+borderTargets.forEach((el) => {
+  borderObserver.observe(el);
 });
