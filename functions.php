@@ -74,6 +74,12 @@ add_filter('script_loader_tag', function($tag, $handle, $src) {
  * テーマURLショートコード
 *************************/
 
+// サイトURLを返すショートコード [homeurl]
+function shortcode_home_url() {
+    return esc_url( home_url() );
+}
+add_shortcode('homeurl', 'shortcode_home_url');
+
 // 親テーマURLを返すショートコード [tempurl]
 function shortcode_parent_theme_url() {
 return esc_url( get_template_directory_uri() );
@@ -85,6 +91,11 @@ function shortcode_child_theme_url() {
 return esc_url( get_stylesheet_directory_uri() );
 }
 add_shortcode('childurl', 'shortcode_child_theme_url');
+
+// phpファイル用_ショートコード [homeurl] のショートハンド関数
+function homeurl() {
+echo do_shortcode('[homeurl]');
+}
 
 // phpファイル用_ショートコード [tempurl] のショートハンド関数
 function tempurl() {

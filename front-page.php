@@ -10,8 +10,58 @@
         </section>
     
         <!-- FV -->
-        <section class="p-fv">
-        <div id="fv" class="p-fv__image"></div>
+        <section class="p-fv" style="height: 600px; background-color: #ddd">
+            <div id="fv" class="p-fv__image"></div>
+            <!--Wave-->
+            <div class="p-fv__waves">
+            <svg
+                class="waves"
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 24 150 28"
+                preserveAspectRatio="none"
+                shape-rendering="auto"
+            >
+                <!-- 1 -->
+                <g transform="translate(48 0)">
+                <g class="wave wave01">
+                    <path
+                    d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+                    fill="rgba(255,255,255,0.7)"
+                    />
+                </g>
+                </g>
+
+                <!-- 2 -->
+                <g transform="translate(48 3)">
+                <g class="wave wave02">
+                    <path
+                    d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+                    fill="rgba(255,255,255,0.5)"
+                    />
+                </g>
+                </g>
+
+                <!-- 3 -->
+                <g transform="translate(48 5)">
+                <g class="wave wave03">
+                    <path
+                    d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+                    fill="rgba(255,255,255,0.3)"
+                    />
+                </g>
+                </g>
+
+                <!-- 4 -->
+                <g transform="translate(48 7)">
+                <g class="wave wave04">
+                    <path
+                    d="M-160 44c30 0 58-18 88-18s58 18 88 18 58-18 88-18 58 18 88 18v44h-352z"
+                    fill="#fff"
+                    />
+                </g>
+                </g>
+            </svg>
+            </div>
         </section>
 
         <!-- ABOUT -->
@@ -21,20 +71,26 @@
                 <p class="c-head2--ja">自己紹介</p>
                 <div class="p-about__cont">
                     <div class="p-about__top-cont">
-                        <h3 class="c-head3">聴く、知る、共感する</h3>
-                        <p>ことたびデザインがWEB制作において大切にしている3つの姿勢です。<br>
+                        <h3 class="c-head3 p-about__head3 c-variable-border">
+                            <span class="p-about__headtxt">聴く、知る、共感する</span>
+                        </h3>
+                        <p class="p-about__txt">ことたびデザインがWEB制作において大切にしている3つの姿勢です。<br>
                         WEB制作で最も大事なことは「愛を持ってWEBサイトに向き合うこと」だと考えています。<br>
                         お客様の思いをお聞かせください。そして、その思いを形にするお手伝いをさせていただくのがことたびデザインの役目だと考えています。</p>
                     </div>
                     <div class="p-about__bottom-cont">
-                        <h3 class="c-head3">プロフィール</h3>
+                        <h3 class="c-head3 p-about__head3 c-variable-border">
+                            <span class="p-about__headtxt">プロフィール</span>
+                        </h3>
                         <div class="p-about__bottom-flex">
-                            <div class="p-about__img" style="width: 250px; height:250px;background: green">
-                                <img src="<?php tempurl(); ?>/images/plofile_image_.jpg" width="250" height="250" loading="lazy" alt="藻塩 修">
+                            <div class="p-about__img" style="width: 300px; height:300px;background: green">
+                                <img src="<?php tempurl(); ?>/images/plofile_image_.jpg" width="300" height="300" loading="lazy" alt="藻塩 修">
                             </div>
                             <div class="p-about__cont-profile">
-                                <p class="p-about__name">藻塩 修</p>
-                                <p class="p-about__name--en">Moshio Osamu</p>
+                                <div class="p-about__namewrap u-flex">
+                                    <p class="p-about__name">藻塩 修</p>
+                                    <p class="p-about__name--en">Moshio Osamu</p>
+                                </div>
                                 <p class="p-about__cont-txt">
                                     1979年千葉県生まれ、東京在住。法政大学文学部英文学科卒業。<br>
                                     大学在学中より音楽活動に没頭し、卒業後も楽器店に勤務しながら音楽活動を継続する。<br>
@@ -82,27 +138,27 @@
                     <ul class="p-service__cont-list">
                         <li class="p-service__cont-item">
                             <img src="<?php tempurl(); ?>/images/service_web.png" width="355" height="355" loading="lazy" alt="ホームページ制作">
-                            <h3 class="c-head3">
+                            <h3 class="c-head3 --gothic">
                                 <span class="p-service__num">01</span>
-                                ホームページ制作
+                                <p class="p-service__subttl u-center">ホームページ制作</p>
                             </h3>
-                            <p>お店のホームページ、コーポレートサイト、商品・サービス紹介のためのLP（ランディングページ）などを制作いたします。HTML /CSS/JavaScriptを使用してお客様だけのオリジナルデザインを制作する方法から、コスト重視でテンプレートを使用する方法まで、お客様に最適な方法でご提案をさせていただきます。</p>
+                            <p class="p-service__text c-variable-border">お店のホームページ、コーポレートサイト、商品・サービス紹介のためのLP（ランディングページ）などを制作いたします。HTML /CSS/JavaScriptを使用してお客様だけのオリジナルデザインを制作する方法から、コスト重視でテンプレートを使用する方法まで、お客様に最適な方法でご提案をさせていただきます。</p>
                         </li>
                         <li class="p-service__cont-item">
                             <img src="<?php tempurl(); ?>/images/service_wordpress.png" width="355" height="355" loading="lazy" alt="WordPress制作">
-                            <h3 class="c-head3">
+                            <h3 class="c-head3 --gothic ">
                                 <span class="p-service__num">02</span>
-                                WordPress制作
+                                <p class="p-service__subttl u-center">WordPress制作</p>
                             </h3>
-                            <p>WordPressを使用してお客様のホームページを制作致します。WordPressを使用することにより、「お知らせ」や「ブログ」などのコンテンツをお客様ご自身で更新していただくことが可能です。情報発信やユーザーコミュニケーションを大切に考えているオーナー様にオススメです。</p>
+                            <p class="p-service__text c-variable-border">WordPressを使用してお客様のホームページを制作致します。WordPressを使用することにより、「お知らせ」や「ブログ」などのコンテンツをお客様ご自身で更新していただくことが可能です。情報発信やユーザーコミュニケーションを大切に考えているオーナー様にオススメです。</p>
                         </li>
                         <li class="p-service__cont-item">
                             <img src="<?php tempurl(); ?>/images/service_support.png" width="355" height="355" loading="lazy" alt="IT業務サポート">
-                            <h3 class="c-head3">
+                            <h3 class="c-head3 --gothic ">
                                 <span class="p-service__num">03</span>
-                                IT業務サポート
+                                <p class="p-service__subttl u-center">IT業務サポート</p>
                             </h3>
-                            <p>制作したホームページの運用をはじめ、業務用PCの設定・メンテナンス、またインターネット接続用の回線の運用などシステムに関する業務をサポートさせて頂きます。自社チーム内にITに詳しい方がいない場合など、お気軽にご相談ください。</p>
+                            <p class="p-service__text c-variable-border">制作したホームページの運用をはじめ、業務用PCの設定・メンテナンス、またインターネット接続用の回線の運用などシステムに関する業務をサポートさせて頂きます。自社チーム内にITに詳しい方がいない場合など、お気軽にご相談ください。</p>
                         </li>
                     </ul>
                 </div>
@@ -176,6 +232,7 @@
 
                     </ul>
                 </div>
+                <a class="c-btn u-mt50" href="<?= homeurl() ?>/blog">ブログ記事一覧へ</a>
             </div>
         </section>
 
@@ -220,7 +277,7 @@
                 <h2 class="c-head2">contact</h2>
                 <p class="c-head2--ja">お問合せ</p>
                 <div class="p-contact__wrap">
-                    <a href="" class="c-btn">お問合わせ</a>
+                    <a href="<?= homeurl() ?>/contact" class="c-btn --circle">お問合わせ</a>
                 </div>
             </div>
         </section>

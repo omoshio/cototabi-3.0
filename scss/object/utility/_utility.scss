@@ -58,6 +58,20 @@ $colors: (
 }
 
 //---------------------------------------------------------------------------------------
+// フォント
+//---------------------------------------------------------------------------------------
+.--gothic {
+  font-family: 游ゴシック medium, yu gothic medium, 游ゴシック, yu gothic, メイリオ, meiryo, ヒラギノ角ゴ pro, hiragino kaku gothic pro, sans-serif !important;
+}
+
+.--mincho {
+  font-family: YuMincho, "Yu Mincho", 游明朝, "Times New Roman",
+  "Hiragino Mincho Pro", "ヒラギノ明朝 Pro W3",
+  "Sawarabi Mincho", "ＭＳ Ｐ明朝", "MS PMincho",
+  "MS 明朝", serif !important;
+}
+
+//---------------------------------------------------------------------------------------
 // function
 //---------------------------------------------------------------------------------------
 
@@ -241,4 +255,8 @@ $lh: 100;
 
 .u-inline {
   display: inline !important;
+}
+
+.u-flex {
+  display: flex !important;
 }
