@@ -1,0 +1,27 @@
+.fa-facebook {
+    color: #3B5998;
+    font-size: clamp(36px, 5.6vw, 56px);
+}
+
+.fa-x-twitter {
+    font-size: clamp(36px, 5.6vw, 56px);
+}
+
+/* snsボタンを回転 */
+.p-menu__sns li {
+    animation: none;
+}
+.p-menu__sns li:hover i {
+  animation: rotateY 0.8s ease-in-out 1;
+}
+
+
+@keyframes rotateY {
+  from {
+    transform: rotateY(0deg);
+  }
+
+  to {
+    transform: rotateY(360deg);
+  }
+}

@@ -1,0 +1,16 @@
+.c-variable-border {
+    position: relative;
+}
+.c-variable-border::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #333;
+  transition:width 0.3s cubic-bezier(0.77, 0.2, 0.05, 1);
+}
+.c-variable-border.is-active::before {
+  width: 100%;
+}

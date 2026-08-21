@@ -1,18 +1,45 @@
 .c-btn {
-    color: #4AC8E7;
-    background-color: #fff;
-    text-decoration: none;
-    border: 1px solid #4AC8E7;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 10px 20px;
-    width: clamp(250px, 5vw, 500px);
-    transition: opacity 0.3s;
-    border-radius: 9999px;
+  font-size: clamp(16px, 2vw, 20px);
+  color: #fff;
+  background-color: #4AC8E7;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 30%;
+  padding: 20px;
+  margin-inline: auto;
+  transition: all .3s;
+  @media (max-width: 767px) {
+    max-width: 100%;
   }
+}
+
+.c-btn.--circle {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: clamp(16px, 2vw, 20px);
+  padding-block: 20px;
+  color: #4AC8E7;
+  background-color: #fff;
+  text-decoration: none;
+  border: 1px solid #4AC8E7;
+  width: 400px;
+  max-width: 50%;
+  transition: opacity 0.3s;
+  border-radius: 9999px;
+  transition: all .3s;
+  @media (max-width: 767px) {
+    max-width: 100%;
+  }
+}
   
-  .c-btn:hover {
-    color: #fff;
-    background-color: #4AC8E7;
-  }
+.c-btn:hover {
+  filter: brightness(110%);
+}
+
+.c-btn.--circle:hover {
+  filter: none;
+  color: #fff;
+  background-color: #4AC8E7;
+}

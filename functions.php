@@ -22,7 +22,7 @@ function vite_asset($entry) {
 function enqueue_vite_assets() {
     $entry = 'main.js'; // Vite の入力エントリに合わせる
 
-    if (defined('WP_ENV') && WP_ENV === 'development') {
+    if (true) {
         // 開発環境 → Vite Dev サーバーから直接読み込み（HMR対応）
         wp_enqueue_script(
             'vite-dev',
@@ -63,9 +63,22 @@ function enqueue_vite_assets() {
 }
 add_action('wp_enqueue_scripts', 'enqueue_vite_assets');
 
+add_filter('script_loader_tag', function($tag, $handle, $src) {
+    if ($handle === 'vite-dev') {
+        return '<script type="module" src="' . esc_url($src) . '"></script>';
+    }
+    return $tag;
+}, 10, 3);
+
 /************************* 
  * テーマURLショートコード
 *************************/
+
+// サイトURLを返すショートコード [homeurl]
+function shortcode_home_url() {
+    return esc_url( home_url() );
+}
+add_shortcode('homeurl', 'shortcode_home_url');
 
 // 親テーマURLを返すショートコード [tempurl]
 function shortcode_parent_theme_url() {
@@ -79,6 +92,11 @@ return esc_url( get_stylesheet_directory_uri() );
 }
 add_shortcode('childurl', 'shortcode_child_theme_url');
 
+// phpファイル用_ショートコード [homeurl] のショートハンド関数
+function homeurl() {
+echo do_shortcode('[homeurl]');
+}
+
 // phpファイル用_ショートコード [tempurl] のショートハンド関数
 function tempurl() {
 echo do_shortcode('[tempurl]');
@@ -89,6 +107,74 @@ function childurl() {
 echo do_shortcode('[childurl]');
 }
 
-/************************* 
- * 次
-*************************/
+/*********************************  
+ * Instagramフィード用 REST API作成 
+***********************************/
+add_action('rest_api_init', function () {
+
+	register_rest_route('custom/v1', '/instagram', [
+		'methods'  => 'GET',
+		'callback' => 'get_instagram_posts','permission_callback' => '__return_true',
+	]);
+
+});
+
+function get_instagram_posts() {
+
+	$cache = get_transient('instagram_posts');
+
+	if (false !== $cache) {
+		return $cache;
+	}
+
+    /*
+    * NOTE:
+    * 開発中のため一時的にtoken直書き
+    * 本番前にwp-config.phpへ移動すること
+    */
+
+    $token = FACEBOOK_ACCESS_TOKEN;
+
+	$url = 'https://graph.facebook.com/v23.0/17841417832453627/media?fields=id,media_type,media_url,permalink,timestamp&access_token=' . $token;
+
+	$response = wp_remote_get($url);
+
+	if (is_wp_error($response)) {
+		return new WP_Error(
+			'instagram_error',
+			'Instagram API error',
+			['status' => 500]
+		);
+	}
+
+	$body = json_decode(
+		wp_remote_retrieve_body($response),
+		true
+	);
+
+	set_transient(
+		'instagram_posts',
+		$body,
+		HOUR_IN_SECONDS
+	);
+
+	return $body;
+}
+/*
+★TODO
+
+tokenをwp-config.php へ移動
+
+・wp-config.phpに追記　
+define(
+	'INSTAGRAM_ACCESS_TOKEN',
+	'xxxxx'
+);
+
+・functions.php を下記に変更
+
+$token = INSTAGRAM_ACCESS_TOKEN;
+*/
+
+/* タイトルタグ出力 */
+add_theme_support('title-tag');
