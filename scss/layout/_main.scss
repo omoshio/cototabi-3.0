@@ -1,8 +1,11 @@
 .l-section-inner {
     width: min(100%, 1260px);
-    padding-inline: clamp(20px, 6vw, 60px);
+    padding-inline: 60px;
     box-sizing: border-box;
     margin-inline: auto;
+    @media (max-width: 767px) {
+        padding-inline: 20px;
+    } 
 }
 
 .l-inner {
@@ -13,6 +16,14 @@
     &--1100 {
         width: min(100% , 1100px);
         margin-inline: auto;
+    }
+}
+
+.p-blog__achvs {
+    .l-section-inner {
+        @media (max-width: 767px) {
+            padding-inline: 15px;
+        }
     }
 }
 

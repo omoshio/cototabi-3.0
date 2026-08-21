@@ -1,0 +1,17 @@
+/* page-top */
+.c-page-top {
+    position: fixed;
+    right: clamp(20px, 4vw, 40px);
+    bottom: clamp(50px, 10vw, 100px);
+    z-index: 1000;
+    width: 60px;
+    height: 60px;
+    cursor: pointer;
+    &-btn:before {
+        font-family: 'Font Awesome 6 Free';
+        font-weight: 900;
+        content: '\f139';
+        font-size: 50px;
+        color: rgba(221, 221, 221, 0.6);       
+    }
+}

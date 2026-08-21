@@ -1,17 +1,38 @@
-<?php get_header(); ?>
+<?php get_header('frontpage'); ?>
+
+<div id="splash">
+    <div id="splash_logo">
+        <div class="p-splash__logo--top">
+            <img src="<?php tempurl(); ?>/images/SVG/co_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="こ">
+            <img src="<?php tempurl(); ?>/images/SVG/to_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="と">
+            <img src="<?php tempurl(); ?>/images/SVG/ta_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="た">
+            <img src="<?php tempurl(); ?>/images/SVG/bi_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="び">
+        </div>
+        <div class="p-splash__logo--bottom">
+            <img src="<?php tempurl(); ?>/images/SVG/de_ddd.svg" class="drop-shadow--splash letterDrop delay-bottom" alt="デ">
+            <img src="<?php tempurl(); ?>/images/SVG/za_ddd.svg" class="drop-shadow--splash letterDrop delay-bottom" alt="ザ">
+            <img src="<?php tempurl(); ?>/images/SVG/i_ddd.svg" class="drop-shadow--splash letterDrop delay-bottom" alt="イ">
+            <img src="<?php tempurl(); ?>/images/SVG/n_ddd.svg" class="drop-shadow--splash letterDrop  delay-bottom" alt="ン">
+        </div>
+    </div>  	
+</div>
+
+<div class="p-splashbg"></div><!---画面遷移用-->
 
 <div class="l-wrraper">
-    <div class="l-main">
-        <section>
-            <h1>WordPress × Vue テストページ Today</h1>
-            <!--<div id="App"></div>　Vueコンポーネントをまとめて使う場合　-->
-            <div id="Hello"></div>
-            <div id="Tabs"></div>
-        </section>
-    
+    <div class="l-main">    
         <!-- FV -->
-        <section class="p-fv" style="height: 600px; background-color: #ddd">
-            <div id="fv" class="p-fv__image"></div>
+        <section class="p-fv">
+            <div id="fv" class="p-fv__image">
+                <div class="p-fv__fixed">
+                    <h1 class="p-fv__logo">
+                        <img src="<?php tempurl(); ?>/images/SVG/logo-w.svg" class="drop-shadow" alt="">
+                    </h1>
+                    <!-- ハンバーガーメニュー -->
+                    <div id="Menu" data-front-page="true"></div>
+                    <!-- // ハンバーガーメニュー -->
+                </div>
+            </div>
             <!--Wave-->
             <div class="p-fv__waves">
             <svg
@@ -65,10 +86,10 @@
         </section>
 
         <!-- ABOUT -->
-        <section class="p-about js-fade">
+        <section id="ac_about" class="p-about js-fadein">
             <div class="l-section-inner">
-                <h2 class="c-head2">about</h2>
-                <p class="c-head2--ja">自己紹介</p>
+                <h2 class="c-head2 --banglaMN">about</h2>
+                <p class="c-head2--ja ">自己紹介</p>
                 <div class="p-about__cont">
                     <div class="p-about__top-cont">
                         <h3 class="c-head3 p-about__head3 c-variable-border">
@@ -83,8 +104,8 @@
                             <span class="p-about__headtxt">プロフィール</span>
                         </h3>
                         <div class="p-about__bottom-flex">
-                            <div class="p-about__img" style="width: 300px; height:300px;background: green">
-                                <img src="<?php tempurl(); ?>/images/plofile_image_.jpg" width="300" height="300" loading="lazy" alt="藻塩 修">
+                            <div class="p-about__img">
+                                <img src="<?php tempurl(); ?>/images/plofile_image.jpg" width="688" height="688" loading="lazy" alt="藻塩 修">
                             </div>
                             <div class="p-about__cont-profile">
                                 <div class="p-about__namewrap">
@@ -106,21 +127,21 @@
         </section>
 
         <!-- WORK -->
-        <section class="p-work js-fade">
+        <section id="ac_work" class="p-work js-fadein">
             <div class="l-section-inner">
-                <h2 class="c-head2">WORK</h2>
+                <h2 class="c-head2 --banglaMN">WORK</h2>
                 <p class="c-head2--ja">制作実績</p>
                 <div class="p-work__cont-wrap">
                     <ul class="p-work__cont-list">
                     <li class="p-work__cont-item">
                         <img src="<?php tempurl(); ?>/images/works-obj-1.png" width="582" height="348" loading="lazy" alt="">
-                        <h3 class="c-head3 u-center u-gothic u-normal">美容室「HAIR DESIGN JUMOKU」様ホームページ</h3>
+                        <h3 class="c-head3 u-center u-gothic u-normal">美容室「HAIR DESIGN JUMOKU」様<span>ホームページ</span></h3>
                         <a class="p-work__cont-link" href="https://hairdesign-jumoku.com" target="_blank" rel="noopener">https://hairdesign-jumoku.com</a>
                         <p class="p-work__cont-txt">千葉県我孫子市にある人気美容室「HAIR DESIGN JUMOKU」様のホームページを作成させていただきました。オーナー様から頂いたイメージは「オールドアメリカン」。大人が心地よく過ごせるクラシックなお店の雰囲気がつたわるようにデザイン・色合いを調整しました。</p>
                     </li>
                     <li class="p-work__cont-item">
                         <img src="<?php tempurl(); ?>/images/works-obj-3.png" width="582" height="348" loading="lazy" alt="">
-                        <h3 class="c-head3 u-center u-gothic u-normal">ラーメン店「豆でっぽう」様ホームページ</h3>
+                        <h3 class="c-head3 u-center u-gothic u-normal">ラーメン店「豆でっぽう」様<span>ホームページ</span></h3>
                         <a class="p-work__cont-link" href="https://mamedp.com" target="_blank" rel="noopener">https://mamedp.com</a>
                         <p class="p-work__cont-txt">千葉県我孫子市にある担々麺が人気のラーメン店「豆でっぽう」様のホームページを作成させて頂きました。オーナー様から頂いたイメージは黒を基調として、こだわりの店内をスタイリッシュに見せて欲しいとのこと。また、飲食店のためスマートフォンでの閲覧に最適なモバイルファーストでサイトを構築いたしました。</p>
                     </li>
@@ -130,14 +151,14 @@
         </section>
 
         <!-- SERVICE -->
-        <section class="p-service js-fade">
+        <section is="ac_service" class="p-service js-fadein">
             <div class="l-section-inner">
-                <h2 class="c-head2">service</h2>
+                <h2 class="c-head2 --banglaMN">service</h2>
                 <p class="c-head2--ja">ご提供サービス</p>
                 <div class="p-service__cont-wrap">
                     <ul class="p-service__cont-list">
                         <li class="p-service__cont-item">
-                            <img src="<?php tempurl(); ?>/images/service_web.png" width="355" height="355" loading="lazy" alt="ホームページ制作">
+                            <img class="p-service__cont-img" src="<?php tempurl(); ?>/images/service_web.png" width="355" height="355" loading="lazy" alt="ホームページ制作">
                             <h3 class="c-head3 --gothic">
                                 <span class="p-service__num">01</span>
                                 <p class="p-service__subttl u-center">ホームページ制作</p>
@@ -145,7 +166,7 @@
                             <p class="p-service__text c-variable-border">お店のホームページ、コーポレートサイト、商品・サービス紹介のためのLP（ランディングページ）などを制作いたします。HTML /CSS/JavaScriptを使用してお客様だけのオリジナルデザインを制作する方法から、コスト重視でテンプレートを使用する方法まで、お客様に最適な方法でご提案をさせていただきます。</p>
                         </li>
                         <li class="p-service__cont-item">
-                            <img src="<?php tempurl(); ?>/images/service_wordpress.png" width="355" height="355" loading="lazy" alt="WordPress制作">
+                            <img class="p-service__cont-img" src="<?php tempurl(); ?>/images/service_wordpress.png" width="355" height="355" loading="lazy" alt="WordPress制作">
                             <h3 class="c-head3 --gothic ">
                                 <span class="p-service__num">02</span>
                                 <p class="p-service__subttl u-center">WordPress制作</p>
@@ -153,7 +174,7 @@
                             <p class="p-service__text c-variable-border">WordPressを使用してお客様のホームページを制作致します。WordPressを使用することにより、「お知らせ」や「ブログ」などのコンテンツをお客様ご自身で更新していただくことが可能です。情報発信やユーザーコミュニケーションを大切に考えているオーナー様にオススメです。</p>
                         </li>
                         <li class="p-service__cont-item">
-                            <img src="<?php tempurl(); ?>/images/service_support.png" width="355" height="355" loading="lazy" alt="IT業務サポート">
+                            <img class="p-service__cont-img" src="<?php tempurl(); ?>/images/service_support.png" width="355" height="355" loading="lazy" alt="IT業務サポート">
                             <h3 class="c-head3 --gothic ">
                                 <span class="p-service__num">03</span>
                                 <p class="p-service__subttl u-center">IT業務サポート</p>
@@ -166,9 +187,9 @@
         </section>
 
         <!-- BLOG -->
-        <section class="p-blog js-fade">
+        <section id="ac_blog" class="p-blog js-fadein">
             <div class="l-section-inner">
-                <h2 class="c-head2">blog</h2>
+                <h2 class="c-head2 --banglaMN">blog</h2>
                 <p class="c-head2--ja">お知らせ</p>
 
                 <div class="p-blog__cont-wrap">
@@ -206,11 +227,11 @@
                                         <?php endif; ?>
                                     </div>
                                     <div class="p-blog__cont-txtbox">
-                                        <h3 class="c-head--3">
-                                            <?php the_title(); ?>
+                                        <h3 class="p-blog__cont-head3">
+                                            <?php echo mb_substr(get_the_title(), 0, 30); ?>
                                         </h3>
                                         <p class="p-blog__cont-txt">
-                                            <?php echo wp_trim_words(get_the_excerpt(), 40, '...'); ?>
+                                            <?php echo mb_substr(get_the_excerpt(), 0, 72) . '...'; ?>
                                         </p>
                                         <p class="p-blog__cont-time">
                                             <time datetime="<?php echo get_the_date('c'); ?>">
@@ -236,47 +257,19 @@
             </div>
         </section>
 
-        <!-- <section class="p-blog js-fade">
-            <div class="l-section-inner">
-                <h2 class="c-head2">blog</h2>
-                <p class="c-head2--ja">お知らせ</p>
-
-                <div class="p-blog__cont-wrap">
-                    <ul class="p-blog__cont-list">
-                        <li class="p-blog__cont-item">
-                            <a class="p-blog__cont-link" href="">
-                                <div class="p-blog__cont-cat">カテゴリ</div>
-                                <div class="p-blog__cont-img">
-                                    <img src="<?php tempurl(); ?>/images/no-image.png" alt="">
-                                </div>
-                                <div class="p-blog__cont-txtbox">
-                                    <h3 class="c-head--3">記事タイトル記事タイトル記事タイトル</h3>
-                                    <p class="p-blog__cont-txt">
-                                        本文抜粋テキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキストテキスト
-                                    </p>
-                                    <p class="p-blog__cont-time">
-                                        <time><i class="far fa-calendar-alt"></i><span>2026/01/01</span></time>
-                                    </p>
-                                </div>
-                            </a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </section> -->
-
-        <section class="p-instagram js-fade">
-            <h2 class="c-head2 --normal-case">Instagram</h2>
+        <section id="ac_instagram" class="p-instagram js-fadein">
+            <h2 class="c-head2 --banglaMN --normal-case">Instagram</h2>
             <p class="c-head2--ja">インスタグラム</p>
+            <!-- スライダーVueコンポーネント -->
             <div id="Slider"></div>
         </section>
 
         <!-- Contact -->
-        <section class="p-contact js-fade">
+        <section id="ac_contact" class="p-contact js-fadein">
             <div class="l-section-inner">
-                <h2 class="c-head2">contact</h2>
+                <h2 class="c-head2 --banglaMN">contact</h2>
                 <p class="c-head2--ja">お問合せ</p>
-                <div class="p-contact__wrap">
+                <div class="p-contact__btnwrap">
                     <a href="<?= homeurl() ?>/contact" class="c-btn --circle">お問合わせ</a>
                 </div>
             </div>

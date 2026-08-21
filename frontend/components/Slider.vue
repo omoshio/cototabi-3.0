@@ -59,14 +59,14 @@ onMounted(async () => {
 }
 
 .slide-item img {
-  width: clamp(140px, 28vw, 280px);
+  width: clamp(130px, 28vw, 280px);
   aspect-ratio: 1 / 1;
   object-fit: cover;
   display: block;
 }
 
 .slide-item {
-  width: clamp(140px, 28vw, 280px);
+  width: clamp(130px, 28vw, 280px);
 }
 
 .slide-link {

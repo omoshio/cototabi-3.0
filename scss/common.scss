@@ -9,7 +9,12 @@
 @use 'object/component/button' as *;
 @use 'object/component/head' as *;
 @use 'object/component/border' as *;
+@use 'object/component/sns' as *;
+@use 'object/component/spalash' as *;
+@use 'object/component/fadein' as *;
+@use 'object/component/pagetop' as *;
 
 @use 'object/utility/utility' as *;
 
 @use 'project/frontpage.scss' as *;
+@use 'project/blog.scss' as *;

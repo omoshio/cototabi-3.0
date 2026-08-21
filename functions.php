@@ -175,3 +175,6 @@ define(
 
 $token = INSTAGRAM_ACCESS_TOKEN;
 */
+
+/* タイトルタグ出力 */
+add_theme_support('title-tag');

@@ -71,6 +71,21 @@ $colors: (
   "MS 明朝", serif !important;
 }
 
+/* 特殊フォント */
+@font-face {
+  font-family: 'Bangla MN';
+  src:
+    url('../font/BanglaMN.woff') format('woff'),
+    url('../font/BanglaMN.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
+.--banglaMN {
+  font-family: 'Bangla MN', serif;
+  font-weight: normal;
+}
+
 //---------------------------------------------------------------------------------------
 // function
 //---------------------------------------------------------------------------------------
