@@ -178,3 +178,17 @@ $token = INSTAGRAM_ACCESS_TOKEN;
 
 /* タイトルタグ出力 */
 add_theme_support('title-tag');
+
+/**
+ * common.js
+ */
+function enqueue_common_js() {
+    wp_enqueue_script(
+        'common-js',
+        get_template_directory_uri() . '/js/common.js',
+        array('jquery'),
+        filemtime(get_template_directory() . '/js/common.js'),
+        true
+    );
+}
+add_action('wp_enqueue_scripts', 'enqueue_common_js');

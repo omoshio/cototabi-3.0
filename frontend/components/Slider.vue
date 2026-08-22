@@ -34,11 +34,13 @@ onMounted(async () => {
   try {
     const base = import.meta.env.VITE_API_BASE
 
-    const response = await fetch(
-      `${base}/wp-json/custom/v1/instagram`
-    )
+    console.log('API BASE:', base)
 
-    console.log('ENV:', import.meta.env)
+    const url = `${base}/wp-json/custom/v1/instagram`
+
+    console.log('FETCH URL:', url)
+
+    const response = await fetch(url)
 
     const data = await response.json()
 

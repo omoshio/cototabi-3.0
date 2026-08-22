@@ -1,7 +1,7 @@
 <?php get_header('frontpage'); ?>
 
 <div id="splash">
-    <div id="splash_logo">
+    <div id="splash-logo">
         <div class="p-splash__logo--top">
             <img src="<?php tempurl(); ?>/images/SVG/co_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="こ">
             <img src="<?php tempurl(); ?>/images/SVG/to_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="と">
@@ -17,7 +17,7 @@
     </div>  	
 </div>
 
-<div class="p-splashbg"></div><!---画面遷移用-->
+<div class="splashbg"></div><!---画面遷移用-->
 
 <div class="l-wrraper">
     <div class="l-main">    

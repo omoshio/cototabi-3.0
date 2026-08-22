@@ -34,6 +34,9 @@ borderTargets.forEach((el) => {
 
 //spalash
 let ref = document.referrer
+
+ref = 'http://local.cototabi.com'
+
 if (ref) {
   const refUrl = new URL(ref);
 

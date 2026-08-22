@@ -174,7 +174,7 @@ body.appear {
   /*画面を開いた後の背景色を指定*/
 }
 
-.p-splashbg {
+.splashbg {
   position: fixed;
   top: 0;
   right: 0;
@@ -207,14 +207,14 @@ body.appear {
 }
 
 /*画面遷移の後現れるコンテンツ設定*/
-.l-wrraper{
+.l-wrapper{
   position: relative;
   opacity: 0;
   /*はじめは透過0に*/
 }
 
 /*bodyにappearクラスがついたら出現*/
-body.appear .l-wrraper {
+body.appear .l-wrapper {
   animation-name: PageAnimeAppear;
   animation-duration: 0.8s;
   animation-delay: 0.2s;
