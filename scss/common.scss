@@ -13,8 +13,13 @@
 @use 'object/component/spalash' as *;
 @use 'object/component/fadein' as *;
 @use 'object/component/pagetop' as *;
+@use 'object/component/breadcrumb' as *;
 
 @use 'object/utility/utility' as *;
 
-@use 'project/frontpage.scss' as *;
-@use 'project/blog.scss' as *;
+@use 'project/frontpage' as *;
+@use 'project/blog' as *;
+@use 'project/page' as *;
+@use 'project/contact' as *;
+@use 'project/header' as *;
+@use 'project/price' as *

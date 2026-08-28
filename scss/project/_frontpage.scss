@@ -244,6 +244,9 @@ body {
             @media (max-width: 767px) {
                 grid-template-columns: 1fr;
             }
+            .c-head3 {
+                font-size: clamp(16px, 1.8vw, 18px);
+            }
         }
         &-link {
             color: #021893;
@@ -299,11 +302,14 @@ body {
             bottom: -60px;
         }
     }
+    .c-head3 {
+        margin-top: clamp(15px, 3vw, 30px);
+    } 
 }
 .p-service__cont-list {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
-    gap: clamp(30px, 6vw, 60px);
+    gap: 60px;
     @media (max-width: 767px) {
         grid-template-columns: 1fr;
     }
@@ -340,7 +346,7 @@ body {
     position: relative;
     padding-block: clamp(60px, 12vw, 120px) clamp(120px, 24vw, 240px);
     margin-block: 0;
-    z-index: 1;
+    z-index: 2;
     &::before {
         position: absolute;
         content: "";

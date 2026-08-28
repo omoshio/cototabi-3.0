@@ -94,7 +94,7 @@ const smoothScrollTrigger = document.querySelectorAll('a[href^="/#"]');
   }
 
 
-//TOPボタンでページ先頭に戻るScript
+//TOPボタンでページ先頭に戻る
 const pageTopBtn = document.getElementById('page-top');
 
 if (pageTopBtn) {
@@ -137,16 +137,23 @@ const categoryMore = document.querySelector('.p-blog__categories-more')
 const categoryList = document.querySelector('.p-blog__categories-list')
 
 if (categoryMore && categoryList) {
-
   categoryMore.addEventListener('click', () => {
-
-    const isOpen = categoryList.classList.toggle('is-open')
-
-    categoryMore.classList.toggle('is-open', isOpen)
-
-    categoryMore.setAttribute('aria-expanded', isOpen)
+    const isOpen = categoryList.classList.contains('is-open')
+    if (isOpen) {
+      categoryList.style.maxHeight = `${categoryList.scrollHeight}px`
+      requestAnimationFrame(() => {
+        categoryList.style.maxHeight = '40px'
+      })
+      categoryList.classList.remove('is-open')
+    } else {
+      categoryList.classList.add('is-open')
+      categoryList.style.maxHeight = `${categoryList.scrollHeight}px`
+    }
+    categoryMore.classList.toggle('is-open', !isOpen)
+    categoryMore.setAttribute('aria-expanded', !isOpen)
 
   })
+
 }
 
 //画面スクロールと連動してメニューバーが固定されるScript

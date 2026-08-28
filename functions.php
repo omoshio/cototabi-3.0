@@ -192,3 +192,6 @@ function enqueue_common_js() {
     );
 }
 add_action('wp_enqueue_scripts', 'enqueue_common_js');
+
+/* 投稿でサムネイルを使用可能に */
+add_theme_support('post-thumbnails');

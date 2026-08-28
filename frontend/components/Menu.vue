@@ -17,12 +17,24 @@
     >
 
       <ul class="p-menu__list --banglaMN">
-        <li class="p-menu__item"><a href="#ac_about">ABOUT</a></li>
-        <li class="p-menu__item"><a href="#ac_work">WORK</a></li>
-        <li class="p-menu__item"><a href="#ac_service">SERVICE</a></li>
-        <li class="p-menu__item"><a href="#ac_blog">BLOG</a></li>
-        <li class="p-menu__item"><a href="#ac_blog">Instagram</a></li>
-        <li class="p-menu__item"><a href="#ac_contact">CONTACT</a></li>
+        <li class="p-menu__item">
+          <a :href="homeUrl + '#ac_about'">ABOUT</a>
+        </li>
+        <li class="p-menu__item">
+          <a :href="homeUrl + '#ac_work'">WORK</a>
+        </li>
+        <li class="p-menu__item">
+          <a :href="homeUrl + '#ac_service'">SERVICE</a>
+        </li>
+        <li class="p-menu__item">
+          <a :href="homeUrl + '#ac_blog'">BLOG</a>
+        </li>
+        <li class="p-menu__item">
+          <a :href="homeUrl + '#ac_instagram'">Instagram</a>
+        </li>
+        <li class="p-menu__item">
+          <a :href="homeUrl + '#ac_contact'">CONTACT</a>
+        </li>
       </ul>
 
       <button
@@ -51,6 +63,9 @@
 </template>
 
 <script setup>
+const menuElement = document.getElementById('Menu')
+const homeUrl = menuElement?.dataset.homeUrl || '/'
+
 import { ref, onMounted, onUnmounted } from 'vue'
 
 const props = defineProps({

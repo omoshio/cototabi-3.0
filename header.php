@@ -10,12 +10,12 @@
   <!-- WordPressやプラグインで追加ßされるCSS/JSを挿入 -->
   <?php wp_head(); ?>
 </head>
-<body <?php body_class(); ?>>
+<body <?php body_class('u-bg--white'); ?>>
 
-<header>
+<header class="p-header">
     <!-- header_1 -->
-    <section class="p-blog-header--top">
-        <h1 class="p-blog-header__logo">
+    <section class="p-header--top">
+        <h1 class="p-header__logo">
             <!--<img src="https://cototabi.com/wp-content/themes/cototabi_splash/images/SVG/logo-b.svg" alt="">-->
             <a href="<?= homeurl() ?>">
                 <img src="<?php tempurl(); ?>/images/SVG/co.svg" alt="こ">
@@ -29,11 +29,12 @@
             </a>
         </h1>
     </section>
-    <div class="p-blog-header__icons">
+    <div class="p-header__icons">
         <!-- 検索 -->
-        <div id="Search"></div>
+        <?php if ( is_page('blog') || is_single() || is_category() || is_search() ) : ?>
+            <div id="Search"></div>
+        <?php endif; ?>
         <!-- ハンバーガーメニュー -->
-        <div id="Menu"></div>
+        <div id="Menu" data-home-url="<?php echo esc_url(home_url('/')); ?>"></div>
     </div>
-    <?php //パンくず読み込み ?>
-    <?php get_template_part('template-parts/breadcrumbs'); ?>
+</header>

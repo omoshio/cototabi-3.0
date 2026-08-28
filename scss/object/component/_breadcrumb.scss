@@ -1,0 +1,10 @@
+.p-blog-breadcrumb {
+    color: #fff;
+    background: linear-gradient(135deg,#6DDAF0 0%, #4AC8E7 45%, #229FC5 100%);
+    padding: 10px 20px;
+    overflow-x: auto;
+    white-space: nowrap;
+    &__txt {
+        color: #fff;
+    }
+}
