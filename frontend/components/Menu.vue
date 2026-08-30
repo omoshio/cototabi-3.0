@@ -47,7 +47,7 @@
 
       <ul class="p-menu__sns">
           <li>
-              <a href="https://www.facebook.com/osamu.moshio.9" target="_blank" class="c-facebook-icon">
+              <a href="https://www.facebook.com/osamu.moshio" target="_blank" class="c-facebook-icon">
                   <i class="fa-brands fa-facebook fa-2x"></i>
               </a>
           </li>
@@ -123,8 +123,8 @@ onUnmounted(() => {
 <style lang="scss" scoped>
 .js-is-scrolled {
   position: fixed;
-  top: clamp(20px, 4vw, 40px);
-  right: clamp(20px, 4vw, 40px);
+  top: clamp(10px, 4vw, 40px);
+  right: clamp(10px, 4vw, 40px);
   z-index: 10;
   opacity: 1;
   animation: menuFadeIn 600ms ease forwards;

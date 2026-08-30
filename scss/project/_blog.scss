@@ -308,3 +308,11 @@
      font-size: clamp(16px, 2.4vw, 24px);
      margin-bottom: clamp(10px, 2vw, 20px);
 }
+
+.home .p-blog__cont-item {
+    &:nth-of-type(4) {
+        @media (min-width: 992px) and (max-width: 1200px) {
+            display: none;
+        }
+    }
+}

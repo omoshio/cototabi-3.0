@@ -22,7 +22,7 @@ function vite_asset($entry) {
 function enqueue_vite_assets() {
     $entry = 'main.js'; // Vite の入力エントリに合わせる
 
-    if (true) {
+    if (defined('WP_ENV') && WP_ENV === 'development') {
         // 開発環境 → Vite Dev サーバーから直接読み込み（HMR対応）
         wp_enqueue_script(
             'vite-dev',

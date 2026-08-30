@@ -1,7 +1,7 @@
 <?php get_header('frontpage'); ?>
 
 <div id="splash">
-    <div id="splash-logo">
+    <div id="splashlogo">
         <div class="p-splash__logo--top">
             <img src="<?php tempurl(); ?>/images/SVG/co_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="こ">
             <img src="<?php tempurl(); ?>/images/SVG/to_ddd.svg" class="drop-shadow--splash letterDrop delay-top" alt="と">
@@ -19,7 +19,7 @@
 
 <div class="splashbg"></div><!---画面遷移用-->
 
-<div class="l-wrraper">
+<div class="l-wrapper">
     <div class="l-main">    
         <!-- FV -->
         <section class="p-fv">
@@ -29,7 +29,7 @@
                         <img src="<?php tempurl(); ?>/images/SVG/logo-w.svg" class="drop-shadow" alt="">
                     </h1>
                     <!-- ハンバーガーメニュー -->
-                    <div id="Menu" data-front-page="true" data-home-url="<?php echo esc_url(home_url('/')); ?>"></div>
+                    <div id="Menu" data-front-page="true"></div>
                     <!-- // ハンバーガーメニュー -->
                 </div>
             </div>
@@ -151,7 +151,7 @@
         </section>
 
         <!-- SERVICE -->
-        <section id="ac_service" class="p-service js-fadein">
+        <section is="ac_service" class="p-service js-fadein">
             <div class="l-section-inner">
                 <h2 class="c-head2 --banglaMN">service</h2>
                 <p class="c-head2--ja">ご提供サービス</p>
@@ -161,25 +161,25 @@
                             <img class="p-service__cont-img" src="<?php tempurl(); ?>/images/service_web.png" width="355" height="355" loading="lazy" alt="ホームページ制作">
                             <h3 class="c-head3 --gothic">
                                 <span class="p-service__num">01</span>
-                                <span class="p-service__subttl u-center">ホームページ制作</span>
+                                <p class="p-service__subttl u-center">ホームページ制作</p>
                             </h3>
-                            <p class="p-service__text c-variable-border">お店のホームページ、コーポレートサイト、商品・サービス紹介のためのLP（ランディングページ）などを制作いたします。HTML /CSS/JavaScriptを使用してお客様だけのオリジナルデザインを制作する方法から、コスト重視でテンプレートを使用する方法まで、お客様に最適な方法でご提案をさせていただきます。</p>
+                            <p class="p-service__txt c-variable-border">お店のホームページ、コーポレートサイト、商品・サービス紹介のためのLP（ランディングページ）などを制作いたします。HTML /CSS/JavaScriptを使用してお客様だけのオリジナルデザインを制作する方法から、コスト重視でテンプレートを使用する方法まで、お客様に最適な方法でご提案をさせていただきます。</p>
                         </li>
                         <li class="p-service__cont-item">
                             <img class="p-service__cont-img" src="<?php tempurl(); ?>/images/service_wordpress.png" width="355" height="355" loading="lazy" alt="WordPress制作">
                             <h3 class="c-head3 --gothic ">
                                 <span class="p-service__num">02</span>
-                                <span class="p-service__subttl u-center">WordPress制作</span>
+                                <p class="p-service__subttl u-center">WordPress制作</p>
                             </h3>
-                            <p class="p-service__text c-variable-border">WordPressを使用してお客様のホームページを制作致します。WordPressを使用することにより、「お知らせ」や「ブログ」などのコンテンツをお客様ご自身で更新していただくことが可能です。情報発信やユーザーコミュニケーションを大切に考えているオーナー様にオススメです。</p>
+                            <p class="p-service__txt c-variable-border">WordPressを使用してお客様のホームページを制作致します。WordPressを使用することにより、「お知らせ」や「ブログ」などのコンテンツをお客様ご自身で更新していただくことが可能です。情報発信やユーザーコミュニケーションを大切に考えているオーナー様にオススメです。</p>
                         </li>
                         <li class="p-service__cont-item">
                             <img class="p-service__cont-img" src="<?php tempurl(); ?>/images/service_support.png" width="355" height="355" loading="lazy" alt="IT業務サポート">
                             <h3 class="c-head3 --gothic ">
                                 <span class="p-service__num">03</span>
-                                <span class="p-service__subttl u-center">IT業務サポート</span>
+                                <p class="p-service__subttl u-center">IT業務サポート</p>
                             </h3>
-                            <p class="p-service__text c-variable-border">制作したホームページの運用をはじめ、業務用PCの設定・メンテナンス、またインターネット接続用の回線の運用などシステムに関する業務をサポートさせて頂きます。自社チーム内にITに詳しい方がいない場合など、お気軽にご相談ください。</p>
+                            <p class="p-service__txt c-variable-border">制作したホームページの運用をはじめ、業務用PCの設定・メンテナンス、またインターネット接続用の回線の運用などシステムに関する業務をサポートさせて頂きます。自社チーム内にITに詳しい方がいない場合など、お気軽にご相談ください。</p>
                         </li>
                     </ul>
                 </div>
@@ -228,24 +228,10 @@
                                     </div>
                                     <div class="p-blog__cont-txtbox">
                                         <h3 class="p-blog__cont-head3">
-                                            <?php
-                                            $title = get_the_title();
-                                            echo esc_html(
-                                                mb_strlen($title) > 30
-                                                    ? mb_substr($title, 0, 30) . '...'
-                                                    : $title
-                                            );
-                                            ?>
+                                            <?php echo mb_substr(get_the_title(), 0, 30); ?>
                                         </h3>
                                         <p class="p-blog__cont-txt">
-                                    <?php
-                                        $excerpt = get_the_excerpt();
-                                        echo esc_html(
-                                            mb_strlen($excerpt) > 72
-                                                ? mb_substr($excerpt, 0, 72) . '...'
-                                                : $excerpt
-                                        );
-                                        ?>
+                                            <?php echo mb_substr(get_the_excerpt(), 0, 72) . '...'; ?>
                                         </p>
                                         <p class="p-blog__cont-time">
                                             <time datetime="<?php echo get_the_date('c'); ?>">
@@ -258,19 +244,16 @@
                                     </div>
                                 </a>
                             </li>
+
                         <?php
                             endwhile;
-                        else :
-                        ?>
-                            <li>記事が見つかりませんでした。</li>
-                        <?php
+                            wp_reset_postdata();
                         endif;
-
-                        wp_reset_postdata();
                         ?>
+
                     </ul>
                 </div>
-                <a class="c-btn u-mt60" href="<?= homeurl() ?>/blog">ブログ記事一覧へ</a>
+                <a class="c-btn u-mt50" href="<?= homeurl() ?>/blog">ブログ記事一覧へ</a>
             </div>
         </section>
 
@@ -285,7 +268,7 @@
         <section id="ac_contact" class="p-contact js-fadein">
             <div class="l-section-inner">
                 <h2 class="c-head2 --banglaMN">contact</h2>
-                <p class="c-head2--ja">お問合わせ</p>
+                <p class="c-head2--ja">お問合せ</p>
                 <div class="p-contact__btnwrap">
                     <a href="<?= homeurl() ?>/contact" class="c-btn --circle">お問合わせ</a>
                 </div>

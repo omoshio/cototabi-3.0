@@ -9,5 +9,8 @@
         img {
             margin-inline: 0.15em;
         }
+        @media (max-width: 767px) {
+            transform: scale(0.7);
+        }
     }
 }

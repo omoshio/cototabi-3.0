@@ -6,6 +6,7 @@ body {
 .p-fv {
     position: relative;
     height: 100vh;
+    z-index: 3;
 }
 .p-fv__logo {
     margin-bottom: clamp(15px, 3vw, 30px);
@@ -43,11 +44,6 @@ body {
 .p-blog,
 .p-instagram {
     margin-block: clamp(60px, 12vw, 120px);
-}
-/* fv */
-.p-fv {
-    position: relative;
-    z-index: 2;
 }
 
 /* waves svg */
@@ -138,6 +134,7 @@ body {
     }
     &__head3 {
         margin-bottom: 30px;
+        font-weight: normal;
         &::before {
             top: 0;
             bottom: 0;
@@ -145,10 +142,12 @@ body {
             z-index: -1;
         }
     }
+    &__txt {
+        font-size: clamp(14px, 1.6vw, 16px);
+    }
     &__headtxt {
         background-color: #fff;
         padding-right: 20px;
-        font-size: 24px;
     }
     &__img {
         width:clamp(280px, 37.7vw, 377px);
@@ -191,6 +190,9 @@ body {
             width: 100%;
             margin-inline-start: 0;
         }
+    }
+    &-txt {
+        font-size: clamp(14px, 1.6vw, 16px);
     }
 }
 
@@ -246,13 +248,14 @@ body {
             }
             .c-head3 {
                 font-size: clamp(16px, 1.8vw, 18px);
+                line-height: 1.6;
             }
         }
         &-link {
             color: #021893;
             display: flex;
             justify-content: center;
-            margin-block: 15px 20px;
+            margin-block: clamp(10px, 1.5vw, 15px) clamp(15px, 2vw, 20px);
             &:hover {
                 color: #00abf4;
                 text-decoration: underline;
@@ -260,6 +263,10 @@ body {
         }
         &-txt {
             line-height: 1.8;
+            font-size: clamp(14px, 1.6vw, 16px);
+            @media (max-width: 767px) {
+                line-height: 1.6;
+            }
         }
     }
 }
@@ -335,10 +342,11 @@ body {
     width: 48px;
     transform: rotate(-45deg);
 }
-.p-service__text {
+.p-service__txt {
     position: relative;
     margin-top: 20px;
     padding-top: 30px;
+    font-size: clamp(14px, 1.6vw, 16px);
 }
 
 /* Instagram */
