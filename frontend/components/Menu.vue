@@ -18,22 +18,22 @@
 
       <ul class="p-menu__list --banglaMN">
         <li class="p-menu__item">
-          <a :href="homeUrl + '#ac_about'">ABOUT</a>
+          <a :href="homeUrl + '#ac_about'" @click="closeMenu">ABOUT</a>
         </li>
         <li class="p-menu__item">
-          <a :href="homeUrl + '#ac_work'">WORK</a>
+          <a :href="homeUrl + '#ac_work'" @click="closeMenu">WORK</a>
         </li>
         <li class="p-menu__item">
-          <a :href="homeUrl + '#ac_service'">SERVICE</a>
+          <a :href="homeUrl + '#ac_service'" @click="closeMenu">SERVICE</a>
         </li>
         <li class="p-menu__item">
-          <a :href="homeUrl + '#ac_blog'">BLOG</a>
+          <a :href="homeUrl + '#ac_blog'" @click="closeMenu">BLOG</a>
         </li>
         <li class="p-menu__item">
-          <a :href="homeUrl + '#ac_instagram'">Instagram</a>
+          <a :href="homeUrl + '#ac_instagram'" @click="closeMenu">Instagram</a>
         </li>
         <li class="p-menu__item">
-          <a :href="homeUrl + '#ac_contact'">CONTACT</a>
+          <a :href="homeUrl + '#ac_contact'" @click="closeMenu">CONTACT</a>
         </li>
       </ul>
 

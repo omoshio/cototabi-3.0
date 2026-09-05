@@ -26,7 +26,7 @@
             <div id="fv" class="p-fv__image">
                 <div class="p-fv__fixed">
                     <h1 class="p-fv__logo">
-                        <img src="<?php tempurl(); ?>/images/SVG/logo-w.svg" class="drop-shadow" alt="">
+                        <img src="<?php tempurl(); ?>/images/SVG/logo-w.svg" class="drop-shadow" alt="ことたびデザイン">
                     </h1>
                     <!-- ハンバーガーメニュー -->
                     <div id="Menu" data-front-page="true"></div>
@@ -151,7 +151,7 @@
         </section>
 
         <!-- SERVICE -->
-        <section is="ac_service" class="p-service js-fadein">
+        <section id="ac_service" class="p-service js-fadein">
             <div class="l-section-inner">
                 <h2 class="c-head2 --banglaMN">service</h2>
                 <p class="c-head2--ja">ご提供サービス</p>

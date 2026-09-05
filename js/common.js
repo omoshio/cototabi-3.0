@@ -32,30 +32,35 @@ borderTargets.forEach((el) => {
   borderObserver.observe(el);
 });
 
-//spalash
+//splash
 let ref = document.referrer
-
-ref = 'http://local.cototabi.com'
+let isInternal = false;
 
 if (ref) {
   const refUrl = new URL(ref);
 
   if (refUrl.hostname === 'cototabi.com' || refUrl.hostname === 'www.cototabi.com') {
-    jQuery("#splash-logo").css('display','none');
-    jQuery(".splashbg").css('display','none');
-    jQuery('body').addClass('appear');
-  } else {
-      jQuery("#splash").delay(1800).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
-      jQuery('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
-      var h = jQuery(window).height();//ブラウザの高さを取得
-      jQuery(".splashbg").css({
-        "border-width":h,//ボーダーの太さにブラウザの高さを代入
-        "animation-name":"backBoxAnime"//animation-nameを定義
-      }); 
-    });
-    jQuery("#splash-logo").delay(1500).fadeOut('slow');
+    isInternal = true;
   }
 }
+
+if(isInternal) {
+  jQuery("#splash-logo").css('display','none');
+  jQuery(".splashbg").css('display','none');
+  jQuery("#splash").css('display','none');
+  jQuery('body').addClass('appear');
+} else {
+    jQuery("#splash").delay(1800).fadeOut('slow',function(){//ローディングエリア（splashエリア）を1.5秒でフェードアウトする記述
+    jQuery('body').addClass('appear');//フェードアウト後bodyにappearクラス付与
+    var h = jQuery(window).height();//ブラウザの高さを取得
+    jQuery(".splashbg").css({
+      "border-width":h,//ボーダーの太さにブラウザの高さを代入
+      "animation-name":"backBoxAnime"//animation-nameを定義
+    }); 
+  });
+  jQuery("#splash-logo").delay(1500).fadeOut('slow');
+}
+
 
 // droptitle
 let number = 1
